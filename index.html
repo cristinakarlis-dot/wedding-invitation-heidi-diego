@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación de Boda | Diego & Heidy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div id="welcome-screen" class="welcome-screen">
+    <div class="welcome-box">
+      <p class="welcome-top">Invitación Especial</p>
+      <h1>Diego & Heidy</h1>
+      <p class="welcome-date">09 de octubre de 2026</p>
+      <button id="enter-btn" class="btn">Ver invitación</button>
+    </div>
+  </div>
+
+  <!-- Brillo dorado -->
+  <div class="sparkles"></div>
+
+  <!-- Música -->
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <button class="music-btn" id="music-toggle">🎵 Música</button>
+
+  <!-- Flores decorativas -->
+  <div class="floral floral-left">❀</div>
+  <div class="floral floral-right">❀</div>
+
+  <header class="hero">
+    <div class="hero-card reveal">
+      <p class="top-text">Nuestra Boda</p>
+      <div class="line"></div>
+      <h1>Diego</h1>
+      <div class="ampersand">&</div>
+      <h1>Heidy</h1>
+      <div class="line"></div>
+      <p class="date">09 de octubre de 2026</p>
+      <p class="phrase">
+        “El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección.”
+      </p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#detalles">Detalles</a>
+    <a href="#contador">Cuenta regresiva</a>
+    <a href="#galeria">Galería</a>
+    <a href="#dresscode">Dress Code</a>
+    <a href="#rsvp">RSVP</a>
+    <a href="#ubicacion">Ubicación</a>
+  </nav>
+
+  <section id="detalles" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Con inmensa alegría</h2>
+      <p class="section-subtitle">Queremos invitarte a compartir con nosotros este momento tan especial</p>
+
+      <div class="card">
+        <p>
+          Con la bendición de Dios y el amor que nos une, celebraremos el inicio de una nueva etapa en nuestras vidas.
+          Nos encantará contar con tu presencia en este día inolvidable.
+        </p>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-box">
+          <h3>Fecha</h3>
+          <p>09 de octubre de 2026</p>
+        </div>
+        <div class="detail-box">
+          <h3>Hora</h3>
+          <p>5:00 PM</p>
+        </div>
+        <div class="detail-box">
+          <h3>Lugar</h3>
+          <p>Salón de Eventos</p>
+        </div>
+        <div class="detail-box">
+          <h3>Dirección</h3>
+          <p>Agrega aquí la dirección real</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contador" class="soft-section reveal">
+    <div class="container">
+      <h2 class="section-title">Cuenta regresiva</h2>
+      <p class="section-subtitle">Cada segundo nos acerca a nuestro gran día</p>
+
+      <div class="countdown" id="countdown">
+        <div class="time-box"><span id="days">0</span><small>Días</small></div>
+        <div class="time-box"><span id="hours">0</span><small>Horas</small></div>
+        <div class="time-box"><span id="minutes">0</span><small>Minutos</small></div>
+        <div class="time-box"><span id="seconds">0</span><small>Segundos</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Nuestra historia en imágenes</h2>
+      <p class="section-subtitle">Recuerdos de nuestro amor</p>
+
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" alt="Foto 1">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Foto 2">
+        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80" alt="Foto 3">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Foto 4">
+      </div>
+    </div>
+  </section>
+
+  <section id="dresscode" class="soft-section reveal">
+    <div class="container">
+      <h2 class="section-title">Dress Code</h2>
+      <p class="section-subtitle">Elegancia clásica para una noche inolvidable</p>
+
+      <div class="card">
+        <p><strong>Formal / Elegante</strong></p>
+        <p>Te invitamos a vestir en tonos suaves, neutros o de gala.</p>
+        <p>Evitar tonos similares al blanco para conservar el protagonismo de los novios.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="reveal">
+    <div class="container">
+      <h2 class="section-title">Confirmación de asistencia</h2>
+      <p class="section-subtitle">Nos encantará contar contigo en este día tan especial</p>
+
+      <div class="card">
+        <form id="rsvp-form">
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guests">Número de acompañantes</label>
+            <select id="guests" name="guests" required>
+              <option value="">Selecciona una opción</option>
+              <option value="0">Solo asistiré yo</option>
+              <option value="1">1 acompañante</option>
+              <option value="2">2 acompañantes</option>
+              <option value="3">3 acompañantes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="attendance">¿Podrás acompañarnos?</label>
+            <select id="attendance" name="attendance" required>
+              <option value="">Selecciona una opción</option>
+              <option value="Sí, asistiré">Sí, asistiré</option>
+              <option value="No podré asistir">No podré asistir</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje para los novios</label>
+            <textarea id="message" name="message" placeholder="Escribe un mensaje bonito..."></textarea>
+          </div>
+
+          <button type="submit" class="btn">Enviar RSVP</button>
+          <a href="https://wa.me/573001112233?text=Hola%20Diego%20y%20Heidy%2C%20quiero%20confirmar%20mi%20asistencia%20a%20su%20boda." target="_blank" class="btn btn-whatsapp">Confirmar por WhatsApp</a>
+
+          <div class="success-message" id="success-message">
+            ¡Gracias por confirmar! Tu respuesta ha sido registrada.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicacion" class="soft-section reveal">
+    <div class="container">
+      <h2 class="section-title">Ubicación</h2>
+      <p class="section-subtitle">Te esperamos para celebrar juntos este día inolvidable</p>
+
+      <div class="card">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.805080518102!2d-74.0720923!3d4.7110001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a8b9b9b9b9%3A0x1234567890abcdef!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v0000000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://maps.google.com" target="_blank" class="btn">Ver en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Con amor, Diego & Heidy ✨</p>
+    <p class="credits">Hecho con amor por <strong>@cristinakarlis</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
