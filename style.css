@@ -178,6 +178,7 @@ h1 {
   margin: 22px auto 0;
   font-size: 1.3rem;
   line-height: 1.7;
+  font-style: italic;
 }
 
 nav {
@@ -216,12 +217,16 @@ section {
   font-size: 3rem;
   color: var(--gold-dark);
   margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
-  color: #74685f;
+  font-size: 1.28rem;
+  color: #8b7563;
   margin-bottom: 35px;
+  font-style: italic;
+  letter-spacing: 0.4px;
+  line-height: 1.7;
 }
 
 .card {
@@ -234,8 +239,9 @@ section {
 }
 
 .card p {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.22rem;
+  line-height: 1.9;
+  color: #5e5148;
 }
 
 .details-grid,
@@ -335,6 +341,7 @@ input, select, textarea {
   font-size: 1rem;
   background: #fffdfb;
   outline: none;
+  font-family: inherit;
 }
 
 textarea {
@@ -355,6 +362,7 @@ textarea {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 20px rgba(167, 134, 69, 0.25);
+  font-family: inherit;
 }
 
 .btn:hover {
@@ -365,7 +373,6 @@ textarea {
 .btn-whatsapp {
   background: linear-gradient(to right, #25D366, #128C7E);
   box-shadow: 0 8px 20px rgba(18, 140, 126, 0.22);
-  margin-left: 10px;
 }
 
 iframe {
@@ -376,17 +383,6 @@ iframe {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.success-message {
-  display: none;
-  margin-top: 15px;
-  color: #7a5c2e;
-  font-size: 1.1rem;
-  background: #fff6e8;
-  padding: 14px;
-  border-radius: 14px;
-  border: 1px solid #ecd7ae;
-}
-
 footer {
   padding: 30px 20px 40px;
   font-size: 1rem;
@@ -395,9 +391,10 @@ footer {
 
 .credits {
   margin-top: 10px;
-  font-size: 0.95rem;
+  font-size: 0.80rem;
   color: #a78645;
   letter-spacing: 1px;
+  text-align: right;
 }
 
 .reveal {
@@ -444,10 +441,5 @@ footer {
     right: 12px;
     padding: 10px 14px;
     font-size: 0.9rem;
-  }
-
-  .btn-whatsapp {
-    margin-left: 0;
-    margin-top: 12px;
   }
 }

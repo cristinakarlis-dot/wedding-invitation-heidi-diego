@@ -1,4 +1,3 @@
-// Pantalla de bienvenida
 const welcomeScreen = document.getElementById("welcome-screen");
 const enterBtn = document.getElementById("enter-btn");
 const music = document.getElementById("bg-music");
@@ -27,8 +26,7 @@ musicToggle.addEventListener("click", () => {
   isPlaying = !isPlaying;
 });
 
-// Cuenta regresiva
-const weddingDate = new Date("October 09, 2026 17:00:00").getTime();
+const weddingDate = new Date("October 09, 2026 18:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
@@ -53,17 +51,49 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// RSVP visual
 const form = document.getElementById("rsvp-form");
-const successMessage = document.getElementById("success-message");
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
-  successMessage.style.display = "block";
-  form.reset();
+
+  const name = document.getElementById("name").value.trim();
+  const guests = document.getElementById("guests").value;
+  const attendance = document.getElementById("attendance").value;
+  const message = document.getElementById("message").value.trim();
+
+  const phoneNumber = "528991226549"; // Reemplaza por tu número real
+
+  let guestsText = "";
+  switch (guests) {
+    case "0":
+      guestsText = "Solo asistiré yo";
+      break;
+    case "1":
+      guestsText = "Iré con 1 acompañante";
+      break;
+    case "2":
+      guestsText = "Iré con 2 acompañantes";
+      break;
+    case "3":
+      guestsText = "Iré con 3 acompañantes";
+      break;
+    default:
+      guestsText = guests;
+  }
+
+  const whatsappMessage =
+    `Hola Heidi y Diego, quiero responder a su invitación de boda.\n\n` +
+    `Nombre: ${name}\n` +
+    `Confirmación: ${attendance}\n` +
+    `Acompañantes: ${guestsText}\n` +
+    `Mensaje: ${message ? message : "Sin mensaje"}\n\n` +
+    `Con cariño.`;
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappURL, "_blank");
 });
 
-// Animación al hacer scroll
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
