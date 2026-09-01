@@ -87,7 +87,7 @@ form.addEventListener("submit", function(e) {
     `Confirmación: ${attendance}\n` +
     `Acompañantes: ${guestsText}\n` +
     `Mensaje: ${message ? message : "Sin mensaje"}\n\n` +
-    `Con cariño.`;
+    `Con cariño ${name}.`;
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
