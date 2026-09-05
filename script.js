@@ -61,7 +61,7 @@ form.addEventListener("submit", function(e) {
   const attendance = document.getElementById("attendance").value;
   const message = document.getElementById("message").value.trim();
 
-  const phoneNumber = "528992580239";
+  const phoneNumber = "528994528145";
 
   let guestsText = "";
   switch (guests) {
